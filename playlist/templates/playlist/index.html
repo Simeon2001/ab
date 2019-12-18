@@ -1,0 +1,23 @@
+{% extends 'playlist/base.html' %}
+{% block content %}
+    <div class="iquentral">
+        <h1 class="pa">Iquentral Homepage</h1>
+        {% for link in ur %}
+            <div class="card-deck">
+                <div class="card">
+                    {% if link.images %}
+                        <img src="{{link.images.url}}" class="card-img-top" alt="{{link.username}}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">By {{link.username}}</h5>
+                        <p class="card-text">{{link.description}}</p>
+                        <a href="{{link.website_link}}" class="btn btn-primary">Click</a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{link.date_created}}</small>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

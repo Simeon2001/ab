@@ -1,0 +1,24 @@
+{% extends 'playlist/base.html' %}
+
+{% block content %}
+<div class = "king">
+    <div class = "row">
+        <div class = "col-sm-12 col-md-7">
+            <div class ="panel panel-default">
+                <div class ="panel body">
+                    <h2 class="ya">Not Compulsory To Drop a pictures or images</h2>
+                    <form class ="form-horizontal" action=" " method ="post" enctype = "multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'playlist/form-template.html' %}
+                        <div class ="form-group">
+                            <div class ="col-sm-offset2-2 col-sm-10">
+                    </form>
+                                <button type ="submit" class="btn-danger">submit</button> 
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

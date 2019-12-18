@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Iquental</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'playlist/img/a.png' %}" rel="icon">
+  <link href="{% static 'playlist/img/b.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'playlist/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'playlist/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'playlist/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'playlist/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'playlist/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'playlist/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'playlist/css/style.css' %}" rel="stylesheet">
+  
+</head>
+<body>
+<!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="{% url 'Home' %}" class="scrollto">IQUENTRAL</a></h1>
+      </div>
+      
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{% url 'Home' %}">Home</a></li>
+          <li><a href="{% url 'add'  %}">Add link</a></li>
+          <li><a href="{% url 'ask'  %}">Request</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  <main id="main">
+      <div class="container">
+          <div class="con">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+        <section id="contact" class="section-bg wow fadeInUp">
+          <div class="container">
+    
+            <div class="section-header">
+              <h3>Contact Us</h3>
+              <p>You Can Know More About Us</p>
+            </div>
+    
+            <div class="row contact-info">
+    
+              <div class="col-md-4">
+                <div class="contact-address">
+                  <i class="ion-ios-location-outline"></i>
+                  <h3>Address</h3>
+                  <address>Zone 5 Omoniyi Estate, Akure Ondo State, Nigeria</address>
+                </div>
+              </div>
+    
+              <div class="col-md-4">
+                <div class="contact-phone">
+                  <i class="ion-ios-telephone-outline"></i>
+                  <h3>Phone Number</h3>
+                  <p><a href="tel:+155895548855">+234 8064 8185 79</a></p>
+                </div>
+              </div>
+    
+              <div class="col-md-4">
+                <div class="contact-email">
+                  <i class="ion-ios-email-outline"></i>
+                  <h3>Email</h3>
+                  <p><a href="mailto:iquentral@protonmail.com">iquentral@protonmail.com</a></p>
+                </div>
+              </div>
+    
+            </div>
+        </section><!-- #contact -->
+    </main>
+  
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Iquentral</h3>
+            <p>Your link sharing platform.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'Home' %}">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'add' %}">Add link</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'ask' %}">Requests</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Contact</a></li>
+              
+            </ul>
+          </div>
+          
+        <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Zone 5 Omoniyi Estate <br>
+              Akure, Ondo State<br>
+              Nigeria <br>
+              <strong>Phone:</strong> +234 8064 8185 79<br>
+              <strong>Email:</strong> iquentral@protonmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Iquentral</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">iquentral-devs</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  
+  <script src="{% static 'playlist/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'playlist/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'playlist/lib/touchSwipe/jquery.touchSwipe.min.js' %}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'playlist/contactform/contactform.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'playlist/js/main.js' %}"></script>
+</body>
